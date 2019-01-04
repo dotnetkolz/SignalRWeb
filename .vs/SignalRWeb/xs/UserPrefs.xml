@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{E7806CD6-AB6F-4B7A-9F43-FDA35E731E1B}|Default">
+  <MonoDevelop.Ide.ItemProperties.SignalRWeb PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SignalRWeb/Program.cs">
+    <Files>
+      <File FileName="SignalRWeb/Startup.cs" Line="61" Column="52" />
+      <File FileName="SignalRWeb/Hubs/ChatHub.cs" Line="11" Column="27" />
+      <File FileName="SignalRWeb/Views/Home/SignalR.cshtml" Line="28" Column="27" />
+      <File FileName="SignalRWeb/wwwroot/js/chat.js" Line="24" Column="4" />
+      <File FileName="SignalRWeb/Program.cs" Line="17" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/nkoli001c/Projects/SignalRWeb/SignalRWeb/Hubs/ChatHub.cs" relfile="SignalRWeb/Hubs/ChatHub.cs" line="13" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
