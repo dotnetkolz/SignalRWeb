@@ -25,6 +25,7 @@ namespace SignalRWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -35,7 +36,14 @@ namespace SignalRWeb
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-
+            services.AddCors(options => options.AddPolicy("CorsPolicy", builder =>
+            {
+                builder
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowAnyOrigin()
+                    .AllowCredentials();
+            }));
             services.AddSignalR();
         }
 
@@ -52,6 +60,8 @@ namespace SignalRWeb
                 app.UseHsts();
             }
 
+            app.UseCors("CorsPolicy");
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
@@ -59,6 +69,7 @@ namespace SignalRWeb
             app.UseSignalR(routes => 
             {
                 routes.MapHub<ChatHub>("/chatHub");
+                routes.MapHub<BatHub>("/batHub");
             });
 
             app.UseMvc(routes =>
